@@ -1,0 +1,15 @@
+file = open("practice.txt", "w")
+file.write("Java is a great programming language. Java is widely used for development.")
+file.close()
+
+file = open("practice.txt", "r")
+content = file.read()
+file.close()
+updated_content = content.replace("Java", "Python")
+file = open("practice.txt", "w")
+file.write(updated_content)
+file.close()
+
+file = open("practice.txt", "r")
+print(file.read())
+file.close()
