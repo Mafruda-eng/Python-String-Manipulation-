@@ -1,0 +1,14 @@
+def find_word_line_number(filename, word):
+    with open(filename, "r") as file:
+        lines = file.readlines()
+    for i, line in enumerate(lines, start=1):
+        if word in line:
+            return i
+    return -1
+filename = "practice.txt"
+word = "learning"
+line_number = find_word_line_number(filename, word)
+if line_number == -1:
+    print(f"The word '{word}' is not found in {filename}.")
+else:
+    print(f"The word '{word}' is first found on line {line_number}.")
