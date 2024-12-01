@@ -1,0 +1,12 @@
+file = open("practice.txt", "w")
+file.write("Python is great for learning programming. It is widely used.")
+file.close()
+
+file = open("practice.txt", "r")
+content = file.read()
+file.close()
+
+if "learning" in content:
+    print("The word 'learning' exists in the file.")
+else:
+    print("The word 'learning' does not exist in the file.")
